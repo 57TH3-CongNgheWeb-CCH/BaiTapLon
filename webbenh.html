@@ -4,10 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Trang benh-PerfectCannabis</title>
 	<link rel="stylesheet" type="text/css" href="benh.css">
+
 </head>
 <body>
-	<div id="header"></div>
-
 	<div id="menu">
 		<div id="logo">
 			<a href="#">
@@ -16,34 +15,26 @@
 		</div>
 		<div id="menu-bar">
 			<nav>
-				<a href="./web1.html" >Trang chủ</a>
-				<a href="./page-benh.html" style="color: green">Tra cứu bệnh</a>
+				<a href="#" style="color: green">Trang chủ</a>
+				<a href="#">Tra cứu bệnh</a>
 				<a href="#">Tra cứu thuốc</a>
 				<a href="#">Liên hệ</a>
+				<a href="#">Đăng nhập</a>
+				<a href="#">Đăng ký</a>				
 			</nav>
 		</div>
-		<div id="login-register">
-			<form action="#" id="input">
-				<input type="text" name="id" placeholder="Tài khoản">
-				<input type="password" name="pw" style="margin-top: 3px" placeholder="Mật khẩu">
-			</form>
-		</div>
-		<div id="login-register1">
-			<nav>
-				<a href="">Đăng nhập</a>
-				<a href="">Đăng ký</a>
-			</nav>
-		</div>
+		
+		
 	</div>
-
-	<div id="slides">
-		<div id="dieuhuong">
-
-		</div>
-		<div id="chuyenslide">
-			
-		</div>
-	</div>
+	<div id="slides">		
+		<img class="myslides" src="slides/atiso.jpg">
+		<img class="myslides" src="slides/ThuocDuoc.jpg">
+		<img class="myslides" src="images/bacha.jpg">
+		<img class="myslides" src="slides/hoaanhtuc.jpg">
+		<img class="myslides" src="slides/oaihuong.jpg">
+		<button class="btn" id="btn1" onclick="prev(1)">&#10094</button>
+		<button class="btn" id="btn2" onclick="next(1)">&#10095</button>
+	</div>								
 	<div id="content">
 		<div id="content-column1">
 			<a href="" id="a">
@@ -90,5 +81,6 @@
 		</div>
 	</div>
 	<div id="footer">footer</div>
+	<script src="script.js"></script>
 </body>
 </html>
