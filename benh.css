@@ -1,24 +1,31 @@
 *{
 	padding: 0px;
 	margin: 0px;
-
 }
+
+
 body{
-	width: 1141px;
+	width: 100%;
 	margin: 0px auto;
 	font-family: times new romnan;
 	font-size: 15px;
 }
+#header{
+	background: url('images/2.jpg');
+	height: 375px;
+	width: 1141px;
+	margin: auto;
+}
 #menu{
 	background: white;
 	height: 80px;
+	width: 1141px;
 	position: relative;
 	margin-top: 15px;
 	margin: 0px auto;
 }
 #logo{
 	position: absolute;
-	top: -10px;
 	width: 40%;
 	height: 90px;
 	font-size: 20px;
@@ -27,6 +34,7 @@ body{
 #menu-bar{
 	position: absolute;
 	font-size: 20px;
+	top: 18px;
 	left: 456px;
 	width: 60%;
 }
@@ -40,11 +48,13 @@ body{
 	margin-left: 15px;
 	line-height: 50px;
 }
-
-
+#input{
+	position: absolute;
+	top: -9px;
+}
 #slides{
 	width: 70%;
-	height: 750px;
+	height: 500px;
 	position: relative;
 	margin: 0 auto;
 }
@@ -60,7 +70,7 @@ body{
 	height: 50px;
 	border-radius: 25px;
 	border: none;
-	top: 50%;
+	top: 30%;
 	background-color: rgba(0,0,0,0);
 	color: white;
 	cursor: pointer;
@@ -75,7 +85,16 @@ body{
 }
 #slides>#btn2{
 	position: absolute;
-	left: 97%;
+	left: 96.3%;
+}
+#slogan{
+	margin-top: 30px;
+	height: 100px;
+	position: relative;
+	text-align: center;
+	font-family: Monotype Corsiva;
+	font-size: 40px;
+	color: green;
 }
 #content{
 	margin-top: 15px;
@@ -119,21 +138,46 @@ body{
 	height: 240px;
 	margin-top: 20px;
 }
+#content-column1{
+	width: 360px;
+	background: white;
+	position: absolute;
+	top: 20px;
+	left: 300px;
+}
 #content-column2{
 	width: 360px;
 	background: white;
 	position: absolute;
 	top: 20px;
-	left: 392px;
+	left: 770px;
 }
 #content-column3{
 	width: 360px;
 	background: white;
 	position: absolute;
 	top: 20px;
-	left: 781px;
+	left: 1250px;
 }
 #footer{
 	margin-top: 15px;
 	background: gray;
+}
+#Ten{
+	font-size: 19px;
+}
+#p{
+	font-size: 18px;
+}
+#Ten{
+	position: relative;
+	left: 15%;
+	bottom: 100px;
+	font-family: times new romnan;
+	font-size: 30px;
+}
+#footer{
+	width: 1328px;
+	position: relative;
+	left: 15%;
 }
