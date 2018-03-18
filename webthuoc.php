@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Tra cứu thuốc</title>
 
 	<link rel="stylesheet" type="text/css" href="tracuuthuoc.css">
+	<link rel="icon" href="cannabis.ico">
 </head>
 <body>
 
@@ -16,9 +17,9 @@
 		</div>
 		<div id="menu-bar">
 			<nav>
-				<a href="web1.html">Trang chủ</a>
-				<a href="#">Tra cứu bệnh</a>
-				<a href="webthuoc.html" style="color: green">Tra cứu thuốc</a>
+				<a href="web1.php">Trang chủ</a>
+				<a href="webbenh.php">Tra cứu bệnh</a>
+				<a href="webthuoc.php" style="color: green">Tra cứu thuốc</a>
 				<a href="#">Liên hệ</a>
 				<a href="#">Đăng Nhập</a>
 				<a href="#">Đăng Ký</a>
@@ -36,7 +37,7 @@
 	</div>
 	<div id="content">
 		<div id="Ten">
-			<p><strong>Cây Thuốc Nổi Bật: </strong></p>
+			<p style="margin-left: 28%"><strong>Cây Thuốc Nổi Bật: </strong></p>
 		</div>
 		<div id="content-column1">
 			<a href="" id="a">

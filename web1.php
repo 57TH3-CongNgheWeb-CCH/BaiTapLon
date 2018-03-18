@@ -16,9 +16,9 @@
 		</div>
 		<div id="menu-bar">
 			<nav>
-				<a href="#" style="color: green">Trang chủ</a>
-				<a href="#">Tra cứu bệnh</a>
-				<a href="#">Tra cứu thuốc</a>
+				<a href="web1.php" style="color: green">Trang chủ</a>
+				<a href="webbenh.php">Tra cứu bệnh</a>
+				<a href="webthuoc.php">Tra cứu thuốc</a>
 				<a href="#">Liên hệ</a>
 				<a href="#">Đăng nhập</a>
 				<a href="#">Đăng ký</a>

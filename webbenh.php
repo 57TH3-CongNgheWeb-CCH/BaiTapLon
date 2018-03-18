@@ -5,7 +5,7 @@
 	<title>Trang benh-PerfectCannabis</title>
 	<link rel="stylesheet" type="text/css" href="benh.css">
 	<script src="script.js"></script>
-	
+	<link rel="icon" href="cannabis.ico">
 </head>
 <body>
 	<div id="menu">
@@ -16,9 +16,9 @@
 		</div>
 		<div id="menu-bar">
 			<nav>
-				<a href="#" style="color: green">Trang chủ</a>
-				<a href="#">Tra cứu bệnh</a>
-				<a href="#">Tra cứu thuốc</a>
+				<a href="web1.php" >Trang chủ</a>
+				<a href="webbenh.php" style="color: green">Tra cứu bệnh</a>
+				<a href="webthuoc.php">Tra cứu thuốc</a>
 				<a href="#">Liên hệ</a>
 				<a href="#">Đăng nhập</a>
 				<a href="#">Đăng ký</a>				
