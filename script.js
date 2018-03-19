@@ -36,3 +36,4 @@ function autoSlide(){
 	index++;
 	setTimeout(autoSlide,3000);
 }
+

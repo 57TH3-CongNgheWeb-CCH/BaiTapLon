@@ -20,8 +20,8 @@
 				<a href="webbenh.php">Tra cứu bệnh</a>
 				<a href="webthuoc.php">Tra cứu thuốc</a>
 				<a href="#">Liên hệ</a>
-				<a href="#">Đăng nhập</a>
-				<a href="#">Đăng ký</a>
+				<a href="login.php">Đăng nhập</a>
+				<a href="signup.php">Đăng ký</a>
 			</nav>
 		</div>
 	</div>
@@ -58,6 +58,8 @@
 			<p style="line-height: 1.8; font-size: 18px">Để được giải đáp các thắc mắc liên quan đến sức khỏe, cũng như những cây thuốc, bạn có thể </p>
 		</div>
 	</div>
+	<script src="JqueryBootstrap/bootstrap.min.js"></script>
+	<script src="JqueryBootstrap/jquery-3.3.1.js"></script>
 	<script src="script.js"></script>
 </body>
 </html>

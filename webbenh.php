@@ -20,8 +20,8 @@
 				<a href="webbenh.php" style="color: green">Tra cứu bệnh</a>
 				<a href="webthuoc.php">Tra cứu thuốc</a>
 				<a href="#">Liên hệ</a>
-				<a href="#">Đăng nhập</a>
-				<a href="#">Đăng ký</a>				
+				<a href="login.php">Đăng nhập</a>
+				<a href="signup.php">Đăng ký</a>				
 			</nav>
 		</div>
 		
