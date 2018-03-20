@@ -7,21 +7,21 @@
 	<link rel="icon" href="cannabis.ico">	
 </head>
 <body>
-	<a href="web1.php" ><img src="images/logo2.png" id="image"></a>
+	<div id="logo"><a href="web1.php" ><img src="images/logo2.png"></a></div>
 	<form action="action_page.php" class="modal-content">
 		<div class="imgcontainer">
 			<img src="images/user-ava.png" alt="Avatar" class="avatar">
 		</div>
 
 		<div class="container">
-			<label for="id"><b>Tên tài khoản</b></label>
-			<input type="text" placeholder="Tên tài khoản dài không quá 15 ký tự " name="id" required>
+			<label for="id"><b>Email người dùng</b></label>
+			<input type="text" placeholder="Mời bạn nhập email" name="email" required>
 
 			<label for="pw"><b>Mật khẩu</b></label>
-			<input type="password" placeholder="Mật khẩu" name="pw" required>
+			<input type="password" placeholder="Mời bạn nhập mật khẩu" name="pw" required>
 
 			<label for="pw"><b>Nhập lại mật khẩu</b></label>
-			<input type="password" placeholder="Nhập lại mật khẩu" name="pw" required>
+			<input type="password" placeholder="Mời bạn nhập lại mật khẩu" name="pw" required>
 
 			<button type="submit">Đăng ký</button>
 		</div>

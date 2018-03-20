@@ -7,8 +7,7 @@ form {
     border-radius: 5px;
     width: 35%;
     height: 60%;
-    margin: 0 auto;
-    margin-top: 10%;
+    margin:  0px auto;
 }
 
 /* Full-width inputs */
@@ -60,8 +59,7 @@ img.avatar {
     padding: 16px;
 }
 
-#image{
-    position: absolute;
-    top: -19%;
-    left: 39%;
+#logo{
+    text-align: center;
+    margin-top: 5%;
 }

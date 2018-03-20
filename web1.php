@@ -19,7 +19,7 @@
 				<a href="web1.php" style="color: green">Trang chủ</a>
 				<a href="webbenh.php">Tra cứu bệnh</a>
 				<a href="webthuoc.php">Tra cứu thuốc</a>
-				<a href="#">Liên hệ</a>
+				<a href="askForm.php">Liên hệ</a>
 				<a href="login.php">Đăng nhập</a>
 				<a href="signup.php">Đăng ký</a>
 			</nav>
@@ -32,6 +32,7 @@
 		<img class="myslides" src="images/bacha.jpg">
 		<img class="myslides" src="slides/hoaanhtuc.jpg">
 		<img class="myslides" src="slides/oaihuong.jpg">
+		<img class="myslides" src="images/cucvantho.jpg">
 		<button class="btn" id="btn1" onclick="prev(1)">&#10094</button>
 		<button class="btn" id="btn2" onclick="next(1)">&#10095</button>
 	</div>
