@@ -21,9 +21,9 @@
 				<a href="web1.php">Trang chủ</a>
 				<a href="webbenh.php">Tra cứu bệnh</a>
 				<a href="webthuoc.php" style="color: green">Tra cứu thuốc</a>
-				<a href="#">Liên hệ</a>
-				<a href="#">Đăng Nhập</a>
-				<a href="#">Đăng Ký</a>
+				<a href="Lienhe.php">Liên hệ</a>
+				<a href="login.php">Đăng Nhập</a>
+				<a href="signup.php">Đăng Ký</a>
 			</nav>
 		</div>
 	</div>
@@ -39,7 +39,7 @@
 	<div id="content">
 		<div id="left">
 			<form name="lienhe" method="post" action="#">
-			<p>Liên hệ</p><br>
+			<h1>Liên hệ</h1><br>
 			<p>Chủ đề</p>  
 			<input type="text" name="txtInput1"><br>		
 			Nội dung:<br>	
@@ -47,7 +47,7 @@
 			<button type="submit" name="sendAsk">Gửi</button>
 		</form><br>
 		<form name="phanhoi" method="post" action="#">
-			<p>Phản hồi cho trang web</p>
+			<h1>Phản hồi cho trang web</h1>
 			<p>Chủ đề</p><br>
 			<input type="text" name="txtInput1"><br>
 			<p>Phản hồi của bạn</p>
@@ -67,7 +67,11 @@
 			<div class="fb-page" data-href="https://www.facebook.com/caythuoc.org/" data-tabs="timeline" data-width="270" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
 			<blockquote cite="https://www.facebook.com/caythuoc.org/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/caythuoc.org/">Cây thuốc nam</a></blockquote>
 			</div>
-			<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcaythuoc.org%2F&tabs=timeline&width=270&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="400" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+			<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcaythuoc.org%2F&tabs=timeline&width=270&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="400" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
+			<div>
+				<h2>Phản hồi mới nhất</h2><br>
+				<textarea name="phanhoimoinhat" rows="20" cols="35" overflow="auto" readonly="readonly"></textarea><br>
+			</div>
 		</div>
 
 	<div id="footer">
