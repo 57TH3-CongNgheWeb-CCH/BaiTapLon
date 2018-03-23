@@ -20,7 +20,7 @@
 				<a href="web1.php">Trang chủ</a>
 				<a href="webbenh.php">Tra cứu bệnh</a>
 				<a href="webthuoc.php" style="color: green">Tra cứu thuốc</a>
-				<a href="askForm.php">Liên hệ</a>
+				<a href="Lienhe.php">Liên hệ</a>
 				<a href="login.php">Đăng nhập</a>
 				<a href="signup.php">Đăng ký</a>
 			</nav>
