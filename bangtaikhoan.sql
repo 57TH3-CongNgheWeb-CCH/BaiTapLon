@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 22, 2018 lúc 04:04 PM
+-- Thời gian đã tạo: Th3 15, 2018 lúc 07:12 AM
 -- Phiên bản máy phục vụ: 10.1.30-MariaDB
 -- Phiên bản PHP: 7.2.2
 
@@ -30,7 +30,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `taikhoan` (
   `Email` varchar(50) NOT NULL,
-  `Password` varchar(20) NOT NULL
+  `TenTaiKhoan` varchar(50) NOT NULL,
+  `Password` varchar(20) NOT NULL,
+  `HoTen` text NOT NULL,
+  `Ngaydangky` date NOT NULL,
+  `Sodienthoai` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -41,7 +45,7 @@ CREATE TABLE `taikhoan` (
 -- Chỉ mục cho bảng `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  ADD UNIQUE KEY `Email` (`Email`);
+  ADD PRIMARY KEY (`TenTaiKhoan`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
