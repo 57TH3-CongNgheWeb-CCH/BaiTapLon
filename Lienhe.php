@@ -2,78 +2,110 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Tra cứu thuốc</title>
-
-	<link rel="stylesheet" type="text/css" href="tracuuthuoc.css">
+	<title>Liên hệ</title>	
 	<link rel="icon" href="cannabis.ico">
 	<link rel="stylesheet" type="text/css" href="askForm.css">
+	<script type="text/javascript" src="lienhescript.js"></script>
 </head>
 <body>
-
+	
 	<div id="menu">
 		<div id="logo">
-			<a href="#">
+			<a href="index.php">
 				<img src="images/logo2.png">
 			</a>
 		</div>
 		<div id="menu-bar">
-			<nav>
+			<nav style="display:inline-block;">
 				<a href="web1.php">Trang chủ</a>
 				<a href="webbenh.php">Tra cứu bệnh</a>
-				<a href="webthuoc.php" style="color: green">Tra cứu thuốc</a>
-				<a href="#">Liên hệ</a>
-				<a href="#">Đăng Nhập</a>
-				<a href="#">Đăng Ký</a>
+				<a href="webthuoc.php" >Tra cứu thuốc</a>
+				<a href="Lienhe.php" style="color: green">Liên hệ</a>
+				<div id="dndk" style="display: inline-block;">
+					<a href="login.php">Đăng nhập</a>
+					<a href="signup.php">Đăng ký</a>
+				</div>		
 			</nav>
 		</div>
-	</div>
-	<div id="slides">
-		<img class="myslides" src="slides/atiso.jpg">
-		<img class="myslides" src="slides/ThuocDuoc.jpg">
-		<img class="myslides" src="images/bacha.jpg">
-		<img class="myslides" src="slides/hoaanhtuc.jpg">
-		<img class="myslides" src="slides/oaihuong.jpg">
-		<button class="btn" id="btn1" onclick="prev(1)">&#10094</button>
-		<button class="btn" id="btn2" onclick="next(1)">&#10095</button>
-	</div>
+	</div>	
 	<div id="content">
 		<div id="left">
-			<form name="lienhe" method="post" action="#">
-			<p>Liên hệ</p><br>
-			<p>Chủ đề</p>  
-			<input type="text" name="txtInput1"><br>		
-			Nội dung:<br>	
-			<textarea name="noidung" rows="5" cols="50" required=""></textarea><br>		
-			<button type="submit" name="sendAsk">Gửi</button>
-		</form><br>
-		<form name="phanhoi" method="post" action="#">
-			<p>Phản hồi cho trang web</p>
-			<p>Chủ đề</p><br>
-			<input type="text" name="txtInput1"><br>
-			<p>Phản hồi của bạn</p>
-			<textarea name="noidungphanhoi" rows="5" cols="50" required=""></textarea><br>		
-			<button type="submit" name="sendReply"><p text-align="center">Gửi</p></button>
-		</form>
+			<?php
+				// define variables and set to empty values
+				$nameErr = $emailErr = $genderErr = $websiteErr = "";
+				$name = $email = $gender = $comment = $website = "";
+
+				if ($_SERVER["REQUEST_METHOD"] == "POST") {
+				  if (empty($_POST["name"])) {
+				    $nameErr = "Bắt buộc điền tên";
+				  } else {
+				    $name = test_input($_POST["name"]);
+				    // check if name only contains letters and whitespace
+				    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+				      $nameErr = "Chỉ cho phép chữ cái và khoảng trắng"; 
+				    }
+				  }
+				  
+				  if (empty($_POST["email"])) {
+				    $emailErr = "Bắt buộc điền email";
+				  } else {
+				    $email = test_input($_POST["email"]);
+				    // check if e-mail address is well-formed
+				    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+				      $emailErr = "Sai định dạng email"; 
+				    }
+				  }			    
+				  
+				  if (empty($_POST["comment"])) {
+				    $comment = "";
+				  } else {
+				    $comment = test_input($_POST["comment"]);
+				  }			  
+				}
+
+				function test_input($data) {
+				  $data = trim($data);
+				  $data = stripslashes($data);
+				  $data = htmlspecialchars($data);
+				  return $data;
+				}
+			?>
+			
+			<form name="frm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+				<p><span class="error">* trường bắt buộc</span></p><br>
+				Tên của bạn: <input type="text" name="name" value="<?php echo $name;?>">
+				<span class="error">* <?php echo $nameErr;?></span>
+				<br><br>
+				E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+				<span class="error">* <?php echo $emailErr;?></span>
+				<br><br>
+				Chủ đề: Thuốc <input type="radio" name="radiobtn" >
+				Bệnh <input type="radio" name="radiobtn">
+				Khác <input type="radio" name="radiobtn"><br>
+				Bình luận:<br> <textarea name="comment" class="main_txt_area" rows="10" cols="100" onkeyup="return displayWordCounter();"><?php echo $comment;?></textarea><br>
+				<div class="total_count">Số ký tự còn lại:
+				<input class="show_count" name="totalWordLimit" size="4" readonly="" value="1000" type="text">
+				</div>
+				<br> 
+				<input id="nutgui" type="submit" name="submit" value="Gửi"> 
+			</form>
+			<?
+				$link=mysql_connect("localhost","root","","thuoc");
+				if(!$link){
+					echo 'Ket noi khong thanh cong'.'-'.mysql_connect_error();
+				}else{
+					mysql_set_charset($link,'UTF-8');
+					alert('thanh cong');
+				}
+			?>
 		</div>
 		<div id="right">
-			<div id="fb-root"></div>
-				<script>(function(d, s, id) {
-				  var js, fjs = d.getElementsByTagName(s)[0];
-				  if (d.getElementById(id)) return;
-				  js = d.createElement(s); js.id = id;
-				  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.12';
-				  fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));</script>
-			<div class="fb-page" data-href="https://www.facebook.com/caythuoc.org/" data-tabs="timeline" data-width="270" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-			<blockquote cite="https://www.facebook.com/caythuoc.org/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/caythuoc.org/">Cây thuốc nam</a></blockquote>
-			</div>
-			<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcaythuoc.org%2F&tabs=timeline&width=270&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="400" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-		</div>
+			
 
-	<div id="footer">
-		
+		</div>
+	<div id="footer">		
 	</div>
-	<script src="E:/jquery-3.3.1.min.js"></script>
+	<script src="JqueryBootstrap/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow2.js"></script>
 	<noscript>Not seeing a <a href="http://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>
 

@@ -1,7 +1,32 @@
 body{
     position: relative;
+    
 }
-
+#menu{
+    background: white;
+    height: 80px;
+    width: 1141px;
+    position: relative;
+    margin-top: 15px;
+    margin: 0px auto;
+}
+#menu-bar{
+    position: absolute;
+    font-size: 20px;
+    top: 18px;
+    left: 60%;
+    width: 60%;
+}
+#menu-bar a:hover{
+    
+    color: green;
+}
+#menu nav a{
+    text-decoration: none;
+    color: black;
+    margin-left: 15px;
+    line-height: 50px;
+}
 form {
     border: 3px solid #f1f1f1;
     border-radius: 5px;
