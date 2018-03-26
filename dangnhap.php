@@ -7,7 +7,7 @@
 		if(mysqli_num_rows($result) > 0){
 			echo "Đăng nhập thành công! Chào ".$_POST["email"];
 			$_SESSION['email'] = $_POST['email'];
-			header('Location: index.php');
+			header('Location: appliaction/web.php');
 		}
 		else{
 			echo "ncl";
