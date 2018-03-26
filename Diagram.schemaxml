@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="latin1" collation="latin1_swedish_ci">caythuoc</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="benh" view="colnames">
+<left>308</left>
+<top>100</top>
+<width>94</width>
+<height>129</height>
+<sql_create_table>CREATE TABLE `benh` (
+  `tenbenh` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `bieuhien` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `pp` text CHARACTER SET utf8,
+  PRIMARY KEY (`tenbenh`),
+  KEY `tenbenh` (`tenbenh`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="lienhe" view="colnames">
+<left>303</left>
+<top>597</top>
+<width>91</width>
+<height>129</height>
+<sql_create_table>CREATE TABLE `lienhe` (
+  `Email` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `chude` varchar(20) CHARACTER SET utf8 NOT NULL,
+  `noidung` text CHARACTER SET utf8,
+  KEY `Email` (`Email`),
+  CONSTRAINT `lienhe_ibfk_1` FOREIGN KEY (`Email`) REFERENCES `taikhoan` (`Email`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="qtbenh" view="colnames">
+<left>98</left>
+<top>460</top>
+<width>92</width>
+<height>112</height>
+<sql_create_table>CREATE TABLE `qtbenh` (
+  `Email` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `tenbenh` varchar(50) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`Email`,`tenbenh`),
+  KEY `Email` (`Email`),
+  KEY `tenbenh` (`tenbenh`),
+  CONSTRAINT `qtbenh_ibfk_1` FOREIGN KEY (`Email`) REFERENCES `taikhoan` (`Email`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `qtbenh_ibfk_2` FOREIGN KEY (`tenbenh`) REFERENCES `benh` (`tenbenh`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="qtthuoc" view="colnames">
+<left>764</left>
+<top>629</top>
+<width>87</width>
+<height>112</height>
+<sql_create_table>CREATE TABLE `qtthuoc` (
+  `Email` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `idthuoc` varchar(5) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`Email`,`idthuoc`),
+  KEY `Email` (`Email`),
+  KEY `idthuoc` (`idthuoc`),
+  CONSTRAINT `qtthuoc_ibfk_1` FOREIGN KEY (`Email`) REFERENCES `taikhoan` (`Email`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `qtthuoc_ibfk_2` FOREIGN KEY (`idthuoc`) REFERENCES `thuoc` (`idthuoc`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="taikhoan" view="colnames">
+<left>514</left>
+<top>441</top>
+<width>100</width>
+<height>112</height>
+<sql_create_table>CREATE TABLE `taikhoan` (
+  `Email` varchar(50) NOT NULL,
+  `Password` varchar(20) NOT NULL,
+  PRIMARY KEY (`Email`),
+  UNIQUE KEY `Email` (`Email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="thuoc" view="colnames">
+<left>988</left>
+<top>365</top>
+<width>101</width>
+<height>146</height>
+<sql_create_table>CREATE TABLE `thuoc` (
+  `idthuoc` varchar(5) CHARACTER SET utf8 NOT NULL,
+  `tenthuoc` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `nguongoc` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `congdung` text CHARACTER SET utf8,
+  PRIMARY KEY (`idthuoc`),
+  KEY `idthuoc` (`idthuoc`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="thuocbenh" view="colnames">
+<left>744</left>
+<top>94</top>
+<width>92</width>
+<height>112</height>
+<sql_create_table>CREATE TABLE `thuocbenh` (
+  `tenbenh` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `idthuoc` varchar(5) CHARACTER SET utf8 DEFAULT NULL,
+  KEY `tenbenh` (`tenbenh`),
+  KEY `idthuoc` (`idthuoc`),
+  CONSTRAINT `thuocbenh_ibfk_1` FOREIGN KEY (`tenbenh`) REFERENCES `benh` (`tenbenh`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `thuocbenh_ibfk_2` FOREIGN KEY (`idthuoc`) REFERENCES `thuoc` (`idthuoc`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>
