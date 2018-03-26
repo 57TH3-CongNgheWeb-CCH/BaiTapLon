@@ -11,10 +11,10 @@
 			}
 			if ($truycap=='Viemgan1') {
 				# code...
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/Viemgan.php');
+				include('Tách content/Viemgan.php');
 			}
 			elseif ($truycap=='webbenh2') {
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/content2.1.php');
+				include('Tách content/content2.1.php');
 			}
 		 ?>
 		 <!-- Béo Phì -->
@@ -29,10 +29,10 @@
 			}
 			if ($truycap=='Beophi1') {
 				# code...
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/Beophi.php');
+				include('Tách content/Beophi.php');
 			}
 			elseif ($truycap=='webbenh2') {
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/content2.1.php');
+				include('Tách content/content2.1.php');
 			}
 		 ?>
 		 <!-- Sỏi Thận -->
@@ -47,10 +47,10 @@
 			}
 			if ($truycap=='Soithan1') {
 				# code...
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/Soithan.php');
+				include('Tách content/Soithan.php');
 			}
 			elseif ($truycap=='webbenh2') {
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/content2.1.php');
+				include('Tách content/content2.1.php');
 			}
 		 ?>
 		 <!-- Huyết Áp -->
@@ -65,10 +65,10 @@
 			}
 			if ($truycap=='Huyetap1') {
 				# code...
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/Huyetap.php');
+				include('Tách content/Huyetap.php');
 			}
 			elseif ($truycap=='webbenh2') {
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/content2.1.php');
+				include('Tách content/content2.1.php');
 			}
 		 ?>
 		 <!-- Tim Mạch -->
@@ -83,10 +83,10 @@
 			}
 			if ($truycap=='Timmach1') {
 				# code...
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/Timmach.php');
+				include('Tách content/Timmach.php');
 			}
 			elseif ($truycap=='webbenh2') {
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/content2.1.php');
+				include('Tách content/content2.1.php');
 			}
 		 ?>
 		 <!-- Mất Ngủ -->
@@ -101,10 +101,10 @@
 			}
 			if ($truycap=='Matngu1') {
 				# code...
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/Matngu.php');
+				include('Tách content/Matngu.php');
 			}
 			elseif ($truycap=='webbenh2') {
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/content2.1.php');
+				include('Tách content/content2.1.php');
 			}
 		 ?>
 		 <!-- Tiểu Đường -->
@@ -119,10 +119,10 @@
 			}
 			if ($truycap=='Tieuduong1') {
 				# code...
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/Tieuduong.php');
+				include('Tách content/Tieuduong.php');
 			}
 			elseif ($truycap=='webbenh2') {
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/content2.1.php');
+				include('Tách content/content2.1.php');
 			}
 		 ?> 
 		 <!-- Trĩ -->
@@ -137,10 +137,10 @@
 			}
 			if ($truycap=='Tri1') {
 				# code...
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/Tri.php');
+				include('Tách content/Tri.php');
 			}
 			elseif ($truycap=='webbenh2') {
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/content2.1.php');
+				include('Tách content/content2.1.php');
 			}
 		 ?>
 		 <!-- Mắt -->
@@ -155,10 +155,10 @@
 			}
 			if ($truycap=='Mat1') {
 				# code...
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/Mat.php');
+				include('Tách content/Mat.php');
 			}
 			elseif ($truycap=='webbenh2') {
-				include('C:/xampp/htdocs/test/Webbenh/Tách/Tách content/content2.1.php');
+				include('Tách content/content2.1.php');
 			}
 		 ?> 
 	</div>
