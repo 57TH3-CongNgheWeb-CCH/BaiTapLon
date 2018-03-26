@@ -4,7 +4,7 @@
 	if (isset($_POST["btn_signup"])){
 		$email = $_POST['email'];
 		$pw = $_POST['pw'];
-		$sql = "insert into taikhoan(Email, Password) values('$email','$pw')";
+		$sql = "insert into taikhoan(Email, Password) values('$email','$pw');";
 		$result = mysqli_query($conn, $sql);
 		if ($email == "" && $pw == ""){
 			echo "Không được bỏ trống! Mời bạn điền đẩy đủ thông tin";
