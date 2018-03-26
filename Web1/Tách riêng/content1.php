@@ -1,3 +1,7 @@
+<div id="slogan">
+		<p><b>Better use medicines at the outset</b></p>
+		<p><b>than at the last moment</b></p>
+	</div>
 <div id="content1">
 		<div id="padding">
 			<h2>Giới thiệu</h2><br>
