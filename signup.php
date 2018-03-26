@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -9,7 +9,7 @@
 <body>
 	<?php include("dangky.php"); ?>
 
-	<div id="logo"><a href="web1.php" ><img src="images/logo2.png"></a></div>
+	<div id="logo"><a href="appliaction/web.php" ><img src="images/logo2.png"></a></div>
 	<form method="POST">
 		<div class="imgcontainer">
 			<img src="images/user-ava.png" alt="Avatar" class="avatar">

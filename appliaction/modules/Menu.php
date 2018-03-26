@@ -1,7 +1,7 @@
 
 	<div id="menu">
 		<div id="logo">
-			<a href="web.php">
+			<a href="#">
 				<img src="../images/logo2.png">
 			</a>
 		</div>
