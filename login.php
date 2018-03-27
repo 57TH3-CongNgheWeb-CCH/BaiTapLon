@@ -15,11 +15,11 @@
 		</div>
 		
 		<div class="container">
-			<label for="id"><b>Email người dùng</b></label>
-			<input type="text" placeholder="Tên người dùng" name="email" required>
+			<label for="id"><b>ID người dùng</b></label>
+			<input type="text" placeholder="Mời nhập ID người dùng" name="email" required>
 
 			<label for="pw"><b>Mật khẩu</b></label>
-			<input type="password" placeholder="Mật khẩu" name="pw" required>
+			<input type="password" placeholder="Mời nhập mật khẩu" name="pw" required>
 
 			<button type="submit" name="btn_login">Đăng nhập</button>
 		</div>
