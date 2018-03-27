@@ -1,30 +1,20 @@
-<?php if(isset($_POST["btn_logout"]))  
-{  
-	unset($_SESSION["email"]); 
-	header('Location: web.php') ;
-} 
- ?>
-<div id="menu">
-	<div id="logo">
-		<a href="web.php">
-			<img src="../images/logo2.png">
-		</a>
+
+	<div id="menu">
+		<div id="logo">
+			<a href="#">
+				<img src="../images/logo2.png">
+			</a>
+		</div>
+		<div id="menu-bar">
+			<nav>
+				<a href="web.php">Trang chủ</a>
+				<a href="webbenh.php?webbenh1=webbenh2&id=11">Tra cứu bệnh</a>
+				<a href="index.php?Tracuuthuoc1=tracuuthuoc&id=1" style="color: green">Tra cứu thuốc</a>
+				<a href="../Lienhe.php">Liên hệ</a>
+				<div id="menu2" style="display: inline-block;">
+					<a href="../login.php">Đăng nhập</a>
+					<a href="../signup.php">Đăng ký</a>
+				</div>
+			</nav>
+		</div>
 	</div>
-	<div id="menu-bar">
-		<nav>
-			<a href="web.php">Trang chủ</a>
-			<a href="webbenh.php?webbenh1=webbenh2&id=11">Tra cứu bệnh</a>
-			<a href="index.php?Tracuuthuoc1=tracuuthuoc&id=1">Tra cứu thuốc</a>
-			<a href="../Lienhe.php">Liên hệ</a>
-			<div id="menu2" style="display: inline-block;">
-				<?php if(isset($_SESSION['email'])){ ?>
-				<p>Xin chào - <?php echo $_SESSION['email']; ?></p>
-				<form method="POST"><button name="btn_logout">Đăng xuất</button></form>
-				<?php } else { ?>
-				<a href="../login.php">Đăng nhập</a>
-				<a href="../signup.php">Đăng ký</a>
-				<?php } ?>
-			</div>
-		</nav>
-	</div>
-</div>
