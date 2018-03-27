@@ -1,8 +1,8 @@
-<h1>Viêm gan B</h1>
+<h1 id="tieude">Viêm gan B</h1>
 <div id="img">
-	<img src="../images/viemganb.jpg">
+	<img src="../images/viemganb.jpg" width="600" height="400">
 </div>
-<div>
+<div id="noidung">
 	<!-- chú thích -->
 	<p>Viêm gan siêu vi B là một số dạng bệnh viêm gan do viêm gan siêu vi B gây ra, truyền nhiễm theo đường máu và sinh dục lây đến gần một phần 3 dân số trên toàn thế giới, nhiều nhất tại các nước đang phát triển.</p>
 	<p>Phân loại giai đoạn</p>
@@ -20,3 +20,23 @@
 	<p>Thuốc thảo dược: Atiso</p>
 
 </div>
+<style type="text/css">
+	#img{
+		width: 600px;
+		height: 400px;
+		position: relative;
+		left: 15%;
+	}
+	p{
+		font-size: 18px;
+	}
+	#noidung{
+		width: 80%;
+		position: relative;
+		left: 15%;
+	}
+	#tieude{
+		position: relative;
+		left: 15%;
+	}
+</style>

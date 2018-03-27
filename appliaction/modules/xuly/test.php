@@ -1,8 +1,8 @@
-<h1>Atiso</h1>
+<h1 id="tieude">Atiso</h1>
 <div id="img">
-	<img src="../images/atiso.jpg">
+	<img src="../images/atiso.jpg" width="600" height="400">
 </div>
-<div>
+<div id="noidung">
 	<!-- chú thích -->
 	<p>Cây hoa atiso một loại trà, cũng là một vị thuốc nam điều trị bệnh gan rất hay. Ở bài viết này xin giới thiệu với các bạn những công dụng chính và cách dùng vị thuốc này hiệu quả nhất.</p>
 
@@ -30,3 +30,23 @@ Hoa Atiso thường được thu hái quanh năm, hoa thu về được rửa s�
 
 Cây Atiso có chứa nhiều hợp chất quý có lợi cho cơ thể như: Các acid hữu cơ, Flavonoid, Cynaopicrin và nhiều loại khoáng chất khác.</p>
 </div>
+<style type="text/css">
+	#img{
+		width: 600px;
+		height: 400px;
+		position: relative;
+		left: 15%;
+	}
+	p{
+		font-size: 18px;
+	}
+	#noidung{
+		width: 80%;
+		position: relative;
+		left: 15%;
+	}
+	#tieude{
+		position: relative;
+		left: 15%;
+	}
+</style>

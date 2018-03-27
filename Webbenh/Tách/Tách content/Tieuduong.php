@@ -1,8 +1,8 @@
-<h1>Tiểu đường</h1>
+<h1 id="tieude">Tiểu đường</h1>
 <div id="img">
-	<img src="../images/tieuduong.jpg">
+	<img src="../images/tieuduong.jpg" width="600" height="400">
 </div>
-<div>
+<div id="noidung">
 	<!-- chú thích -->
 	<p>Đái tháo đường, còn gọi là bệnh tiểu đường, là một nhóm bệnh rối loạn chuyển hóa cacbohydrat, mỡ và protein khi hoóc môn insulin của tụy bị thiếu hay giảm tác động trong cơ thể, biểu hiện bằng mức đường trong máu luôn cao; trong giai đoạn mới phát thường làm bệnh nhân đi tiểu nhiều, tiểu ban đêm và do đó làm khát nước. Bệnh tiểu đường là một trong những nguyên nhân chính của nhiều bệnh hiểm nghèo, điển hình là bệnh tim mạch vành, tai biến mạch máu não, mù mắt, suy thận, liệt dương, hoại thư,...</p>
 	<p>Phân loại</p>
@@ -16,3 +16,23 @@
 <p>Tỷ lệ bệnh tiểu đường trong thai kỳ chiếm 3-5% số thai nghén; phát hiện lần đầu tiên trong thai kỳ.</p>
 <p>Thuốc thảo dược: Nấm lim xanh</p>
 </div>
+<style type="text/css">
+	#img{
+		width: 600px;
+		height: 400px;
+		position: relative;
+		left: 15%;
+	}
+	p{
+		font-size: 18px;
+	}
+	#noidung{
+		width: 80%;
+		position: relative;
+		left: 15%;
+	}
+	#tieude{
+		position: relative;
+		left: 15%;
+	}
+</style>

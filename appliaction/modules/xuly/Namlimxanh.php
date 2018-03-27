@@ -1,8 +1,8 @@
-<h1>Nấm lim xanh</h1>
+<h1 id="tieude">Nấm lim xanh</h1>
 <div id="img">
-	<img src="../images/gia-nam-lim-xanh-tien-phuoc-1.jpg" height="225" width="360">
+	<img src="../images/gia-nam-lim-xanh-tien-phuoc-1.jpg" width="600" height="400">
 </div>
-<div>
+<div id="tieude">
 	<!-- chú thích -->
 	<p>Nấm lim xanh có rất nhiều tác dụng, một trong những tác dụng quý nhất của vị thuốc này đó là tác dụng hỗ trợ điều trị bệnh tiểu đường. 
 
@@ -31,3 +31,23 @@ Ngoài ra hàng trục dược chất quý trong nấm lim xanh còn có công d
 Vận đông, thể dục đều đặn sẽ giúp ích rất nhiều cho việc điều trị bệnh
 Không bỏ thuốc Tây mà nên kết hợp sử dụng để đem lại hiệu quả điều trị cao nhất.</p>
 </div>
+<style type="text/css">
+	#img{
+		width: 600px;
+		height: 400px;
+		position: relative;
+		left: 15%;
+	}
+	p{
+		font-size: 18px;
+	}
+	#noidung{
+		width: 80%;
+		position: relative;
+		left: 15%;
+	}
+	#tieude{
+		position: relative;
+		left: 15%;
+	}
+</style>

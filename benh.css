@@ -98,7 +98,7 @@ body{
 }
 #content{
 	margin-top: 15px;
-	height: 900px;
+	height: 1000px;
 	position: relative;
 }
 #content-column1 a p:hover{
@@ -176,8 +176,11 @@ body{
 	font-family: times new romnan;
 	font-size: 30px;
 }
+
 #footer{
 	width: 1328px;
 	position: relative;
 	left: 15%;
+	background : #7EF66C;
+	
 }
