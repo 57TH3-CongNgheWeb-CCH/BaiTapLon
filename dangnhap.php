@@ -11,7 +11,7 @@
 			echo "Đăng nhập thành công! Chào ".$_POST["email"];
 
 			$_SESSION['email'] = $_POST['email'];
-			 echo "<script>console.log( 'Debug Objects: " . $_SESSION['email'] . "' );</script>";
+			echo "<script>console.log( 'Debug Objects: " . $_SESSION['email'] . "' );</script>";
 			header('Location: Webtong/web.php');
 		}
 		else{

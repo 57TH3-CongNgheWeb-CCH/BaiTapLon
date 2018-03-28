@@ -2,93 +2,36 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Admin</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="Admin.css">
-	<link rel="icon" href="cannabis.ico">
+	<title>ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="css/Admin.css">
+	<script type="text/javascript" src="admin.js"></script>
+	<script type="text/javascript" src="JqueryBootstrap/jquery-3.3.1.js"></script>
 </head>
 <body>
-	<div id="menu">
-		<div id="logo">
-			<a href="#">
-				<img src="images/logo2.png">
-			</a>
-		</div>
+	<div id="menu">		
 		<div id="menu-bar">
-			<nav>
-				<a><button id="themthuoc">Thêm Thuốc</button></a>
-				<a><button id="xoathuoc">Xóa Thuốc</button></a>
-				<a><button id="thembenh">Thêm Bệnh</button></a>
-				<a><button id="xoabenh">Xóa Bệnh</button></a>
-			</nav>
+			<ul>
+				<li>Quản lý thuốc</li>
+				<li>Quản lý bệnh</li>
+				<li>Quản lý liên hệ</li>
+				<li>Quản lý tài khoản</li>			
+			</ul>
 		</div>
-		<!-- Thêm Thuốc-->
-		<script> 
-			$(document).ready(function(){
-    		$("#themthuoc").click(function(){
-       	 	$("#them").animate({
-            height: 'toggle'
-        	});
-    			});
-				});
-		</script> 
+		<div id="luachon">
+			<ul>
+				<li id="Them"><a href="Themthuocbenh.php">Thêm</a></li>
+				<li id="Sua">Sửa</li>
+				<li id="Xoa">Xoá</li>
+			</ul>
+			
+		</div>	
+	</div>	
+	<div id="content">
+		<div id=div1></div>
+		<div id=div2></div>
+		<div id=div3></div>
 		
-		<div id="them" >
-				<p>Tên Thuốc: <input type="text" value="" size="30" /></p>
-				<p>Số Lượng: <input type="text" value="" size="30" /></p>
-				<p>Công Dụng: <input type="text" value="" size="10" /></p>
-				<p><input type="submit" value="Thêm Thuốc" /></p>
-		</div>
-		<br><br><br>
-		<!-- Xóa Thuốc-->
-		<script> 
-			$(document).ready(function(){
-    		$("#xoathuoc").click(function(){
-       	 	$("#xoa").animate({
-            height: 'toggle'
-        	});
-    			});
-				});
-		</script> 
 		
-		<div id="xoa" >
-				<p>Tên Thuốc: <input type="text" value="" size="30" /></p>
-				<p>Số Lượng: <input type="text" value="" size="30" /></p>
-				<p><input type="submit" value="Xóa Thuốc" /></p>
-		</div>
-		<br><br><br>
-		<!-- Thêm Bệnh-->
-		<script> 
-			$(document).ready(function(){
-    		$("#thembenh").click(function(){
-       	 	$("#thembenh1").animate({
-            height: 'toggle'
-        	});
-    			});
-				});
-		</script> 
-		
-		<div id="thembenh1" >
-				<p>Tên Bệnh: <input type="text" value="" size="30" /></p>
-				<p>Triệu Chứng <input type="text" value="" size="30" /></p>
-				<p><input type="submit" value="Thêm Bệnh" /></p>
-		</div>
-		<br><br><br>
-		<!-- Xóa Bệnh-->
-		<script> 
-			$(document).ready(function(){
-    		$("#xoabenh").click(function(){
-       	 	$("#xoabenh1").animate({
-            height: 'toggle'
-        	});
-    			});
-				});
-		</script> 
-		
-		<div id="xoabenh1" >
-				<p>Tên Bệnh: <input type="text" value="" size="30" /></p>
-				<p>Triệu Chứng: <input type="text" value="" size="30" /></p>
-				<p><input type="submit" value="Xóa Bệnh" /></p>
-		</div>
+	</div>	
 </body>
 </html>
