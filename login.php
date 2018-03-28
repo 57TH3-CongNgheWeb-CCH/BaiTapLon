@@ -3,12 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Đăng nhập tài khoản</title>
-	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<link rel="icon" href="cannabis.ico">	
 </head>
 <body>
 	<?php include("dangnhap.php"); ?>
-	<div id="logo"><a href="appliaction/web.php" ><img src="images/logo2.png"></a></div>
+	<div id="logo"><a href="Webtong/web.php" ><img src="images/logo2.png"></a></div>
 	<form method="POST">
 		<div class="imgcontainer">
 			<img src="images/user-ava.png" alt="Avatar" class="avatar">

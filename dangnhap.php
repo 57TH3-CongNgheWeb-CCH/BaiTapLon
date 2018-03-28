@@ -12,7 +12,7 @@
 
 			$_SESSION['email'] = $_POST['email'];
 			 echo "<script>console.log( 'Debug Objects: " . $_SESSION['email'] . "' );</script>";
-			header('Location: appliaction/web.php');
+			header('Location: Webtong/web.php');
 		}
 		else{
 			echo "Bạn đăng nhập không đúng tài khoản!";
