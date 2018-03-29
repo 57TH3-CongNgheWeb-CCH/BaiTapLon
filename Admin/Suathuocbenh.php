@@ -18,7 +18,7 @@
 		Công dụng: <br><textarea name="congdung" rows="10" cols="100" overflow="scroll"></textarea><br><br>
 		<input type="submit" name="submit" value="Sửa">
 	</form>
-	<a href="admin.php">Quay lại</a>
+	
 	<h1>Sửa bệnh</h1>
 	<form method="POST">
 		Tên bệnh: <input type="text" name="tenbenh"><br><br>

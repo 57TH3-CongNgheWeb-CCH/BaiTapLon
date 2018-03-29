@@ -1,6 +1,6 @@
 
 	<?php
-		include("ketnoi.php");
+		include("../ketnoi.php");
 		if (isset($_POST["submit2"])){
 			
 			$tenbenh = $_POST['tenbenh'];
