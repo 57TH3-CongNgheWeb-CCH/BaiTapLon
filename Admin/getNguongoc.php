@@ -2,7 +2,7 @@
 	
 	$idthuoc=$_GET['idthuoc'];
 	require('../ketnoi.php');
-
+	mysqli_set_charset($conn,'UTF8');
 	$sql="SELECT * FROM thuoc where idthuoc='$idthuoc'";
 	$result=mysqli_query($conn,$sql);
 

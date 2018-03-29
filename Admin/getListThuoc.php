@@ -1,5 +1,6 @@
 <?php
 	require('../ketnoi.php');
+	mysqli_set_charset($conn,'UTF8');
 	$sql="SELECT * FROM thuoc";
 	$result=mysqli_query($conn,$sql);
 	if(mysqli_num_rows($result)>0){
