@@ -1,9 +1,12 @@
 <?php if(isset($_POST["btn_logout"]))  
 {  
 	unset($_SESSION["email"]); 
+	unset($_SESSION['admin']);
 	header('Location: web.php') ;
 } 
  ?>
+
+
 <div id="menu">
 	<div id="logo">
 		<a href="web.php">
@@ -13,15 +16,20 @@
 	<div id="menu-bar">
 		<nav>
 			<a href="web.php">Trang chủ</a>
-			<a href="webbenh.php?webbenh1=webbenh2&id=11">Tra cứu bệnh</a>
-			<a href="webthuoc.php?Tracuuthuoc1=tracuuthuoc&id=1">Tra cứu thuốc</a>
+			<a href="webbenh.php">Tra cứu bệnh</a>
+			<a href="webthuoc.php" onclick="getThuoc()">Tra cứu thuốc</a>
 			
 			<div id="menu2" style="display: inline-block;">
 				<?php if(isset($_SESSION['email'])){ ?>
 				
 				<p>Xin chào - <?php echo $_SESSION['email']; ?></p>
-
 				<form method="POST"><a href="../Lienhe.php" >Liên hệ</a><button id="btnlogout" name="btn_logout">Đăng xuất</button></form>
+
+				<?php }elseif(isset($_SESSION['admin'])){ ?>
+				
+				<p>Xin chào - <?php echo $_SESSION['admin']; ?></p>
+				<form method="POST"><a href="../Admin.php" >Quản lý</a><button id="btnlogout" name="btn_logout">Đăng xuất</button></form>
+
 				<?php } else { ?>
 				<a href="../login.php">Đăng nhập</a>
 				<a href="../signup.php">Đăng ký</a>
