@@ -5,6 +5,7 @@ $(function(){
 
         if(id == "ListThuoc"){
             $('#div1').load("../Admin/getListThuoc.php");
+
         }
         else if(id=="ListBenh"){
             $('#div1').load("../Admin/getListBenh.php");
@@ -16,6 +17,7 @@ $(function(){
         else if(id=="LienHe"){
             $('#div1').load("../Admin/getLienhe.php");
             $('#div2').load("../Admin/getNoidung.php");
+            $('#vanban').parent().removeChild(this);
         }
     });
 
