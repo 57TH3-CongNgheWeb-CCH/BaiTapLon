@@ -28,7 +28,7 @@
 				<?php }elseif(isset($_SESSION['admin'])){ ?>
 				
 				<p>Xin chào - <?php echo $_SESSION['admin']; ?></p>
-				<form method="POST"><a href="../Admin.php" >Quản lý</a><button id="btnlogout" name="btn_logout">Đăng xuất</button></form>
+				<form method="POST"><a href="../Admin/lienhe1.php" >Quản lý</a><button id="btnlogout" name="btn_logout">Đăng xuất</button></form>
 
 				<?php } else { ?>
 				<a href="../login.php">Đăng nhập</a>
