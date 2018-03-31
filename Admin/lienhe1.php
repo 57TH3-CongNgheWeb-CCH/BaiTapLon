@@ -11,7 +11,7 @@
 </head>
 <body>
 	<?php
-	include('../ketnoi.php');
+	include('../ketnoi.php');//tao ket noi
 	?>
 	<div id="menu">
 		<div id="logo">
@@ -19,7 +19,7 @@
 				<img src="../images/logo2.png">
 			</a>
 		</div>
-		<div id="menu-bar">
+		<div id="menu-bar"><!-- thanh menu -->
 			<nav>
 				<a href="../Webtong/web.php">Trang chủ</a>
 				<a href="quanlythuoc.php">Quản lý thuốc</a>
@@ -30,23 +30,20 @@
 	</div>
 	<form action="" method="post">
 		<div id="dulieu" class="container">
-			<h2>Liên hệ</h2>
-			
+			<h2>Liên hệ</h2>			
 				<div class="row">
 					<div class="col-md-12">
 						<div class="col-md-6" id="div1">
 							 <?php
-								include('getLienhe.php');
+								include('getLienhe.php');//lay du lieu tu getLienhe.php
 							?>
 						</div>
 						<div id="div2" class="col-md-6">
-							<?php include('getNoidung.php'); ?>
+							<?php include('getNoidung.php'); ?><!-- lay du lieu tu getNoidung.php -->
 						</div>
 						
 					</div>
-				</div>
-			
+				</div>			
 		</div>
-
 	</form>
 </body> 
