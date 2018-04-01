@@ -31,8 +31,8 @@
 				<form method="POST"><a href="../Admin/lienhe1.php" >Quản lý</a><button id="btnlogout" name="btn_logout">Đăng xuất</button></form>
 
 				<?php } else { ?>
-				<a href="../login.php">Đăng nhập</a>
-				<a href="../signup.php">Đăng ký</a>
+				<a href="../dangkydangnhap/login.php">Đăng nhập</a>
+				<a href="../dangkydangnhap/signup.php">Đăng ký</a>
 				<?php } ?>
 			</div>
 		</nav>

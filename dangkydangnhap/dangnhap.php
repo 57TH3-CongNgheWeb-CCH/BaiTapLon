@@ -2,7 +2,7 @@
 	
 	session_start();
 
-	include("ketnoi.php");
+	include("../ketnoi.php");
 
 	if(isset($_POST["btn_login"])){
 		$_POST['pw'] = md5($_POST['pw']);
@@ -16,7 +16,7 @@
 					$_SESSION['email'] = $_POST['email'];
 				}
 			
-			header("Location: Webtong/web.php?email='".$_SESSION['email']."'");
+			header("Location:../Webtong/web.php?email='".$_SESSION['email']."'");
 		}
 		else{
 			echo "Bạn đăng nhập không đúng tài khoản!";

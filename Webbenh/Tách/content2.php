@@ -1,4 +1,4 @@
 <div id="content">
-	<?php include("../getBenh.php");?>
+	<?php include("../get/getBenh.php");?>
 </div>
 <script src="../js/script.js"></script>

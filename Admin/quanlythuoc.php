@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Quản Lý Dữ Liệu</title>
 	<link rel="stylesheet" href="../css/quanly2.css">
+	<link rel="icon" href="../cannabis.ico">
+
 </head>
 <body>
 	

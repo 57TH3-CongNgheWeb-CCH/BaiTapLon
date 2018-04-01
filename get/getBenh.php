@@ -1,5 +1,5 @@
 <?php 
-	include("ketnoi.php");// ket noi db
+	include("../ketnoi.php");// ket noi db
 	mysqli_set_charset($conn,"UTF8"); 
 	$sql = "SELECT * FROM benh";// truy van trong db
 	$result = mysqli_query($conn,$sql); 

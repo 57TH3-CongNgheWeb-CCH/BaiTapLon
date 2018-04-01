@@ -11,7 +11,7 @@
 <body>
 
 	<?php 
-	include("../dangnhap.php");
+	include("../dangkydangnhap/dangnhap.php");
 	include("../Webthuoc/Menu.php");
 	include("../Webthuoc/header.php");
 	?>	

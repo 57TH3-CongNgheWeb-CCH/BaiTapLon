@@ -1,5 +1,5 @@
 <?php 
-	include("ketnoi.php");
+	include("../ketnoi.php"); 
 
 	if (isset($_POST["btn_signup"])){
 		$email = $_POST['email'];

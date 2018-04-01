@@ -1,4 +1,4 @@
 <div id="content">
-	<?php include("../getThuoc.php");?>
+	<?php include("../get/getThuoc.php");?>
 </div>
 <script src="../js/script.js"></script>

@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="../JqueryBootstrap/bootstrap.min.css">
 	<script type="text/javascript" src="../JqueryBootstrap/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="../JqueryBootstrap/bootstrap.min.js"></script>
+	<link rel="icon" href="../cannabis.ico">
 	
 </head>
 <body>
