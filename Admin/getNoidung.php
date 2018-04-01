@@ -6,7 +6,7 @@
 	$result=mysqli_query($conn,$sql);
 	if(mysqli_num_rows($result)>0){//kiem tra ton tai ban ghi
 		while($row=mysqli_fetch_assoc($result)){
-			$hienthi='<p>"'.$row['idlienhe'].'-'.$row['noidung'].'"</p>';//lay gia tri tu truong idlienhe va noi tai moi hang
+			$hienthi='<p>'.$row['idlienhe'].'-'.$row['noidung'].'</p>';//lay gia tri tu truong idlienhe va noi tai moi hang
 			echo $hienthi;
 		}
 	}else{

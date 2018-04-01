@@ -3,14 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Liên hệ</title>
-	<link rel="stylesheet" type="text/css" href="askForm.css">
-	<script type="text/javascript" src="js/lienhescript.js"></script>
-	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/benh.css">
+	<link rel="stylesheet" type="text/css" href="../css/askForm.css">
+	<script type="text/javascript" src="../js/lienhescript.js"></script>
+	<script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
 </head>
 <body>
-	<?php include("dangnhap.php"); ?>	
+
+	<?php 
+	include("../dangnhap.php");
+	include("../Webthuoc/Menu.php");
+	include("../Webthuoc/header.php");
+	?>	
 	<?php
-		require("ketnoi.php");//tao ket noi
+		require("../ketnoi.php");//tao ket noi
+		mysqli_set_charset($conn,'UTF8');//chuyen bang ma ky tu
 		//lay du lieu tu form
 		if (isset($_POST["submit"])){
 			$email = $_POST['email'];
@@ -33,13 +40,9 @@
 		mysqli_close($conn);
 		?>
 
-		<div id="logo">
-			<a href="Webtong/web.php">
-				<img src="images/logo2.png">
-			</a>
-		</div><br><br><br>
+		
 		<!-- form nhap thong tin	 -->
-		<form name="frm" method="POST">  
+		<form id="form" name="frm" method="POST">  
 
 			<br>
 			<?php if(isset($_SESSION['email'])){ ?><!-- lay emai cua nguoi dung -->

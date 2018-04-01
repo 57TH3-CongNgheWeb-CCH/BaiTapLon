@@ -23,7 +23,7 @@
 				<?php if(isset($_SESSION['email'])){ ?>
 				
 				<p>Xin chào - <?php echo $_SESSION['email']; ?></p>
-				<form method="POST"><a href="../Lienhe.php" >Liên hệ</a><button id="btnlogout" name="btn_logout">Đăng xuất</button></form>
+				<form method="POST"><a href="Lienhe.php" >Liên hệ</a><button id="btnlogout" name="btn_logout">Đăng xuất</button></form>
 
 				<?php }elseif(isset($_SESSION['admin'])){ ?>
 				
