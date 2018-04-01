@@ -5,6 +5,7 @@
 	include("ketnoi.php");
 
 	if(isset($_POST["btn_login"])){
+		$_POST['pw'] = md5($_POST['pw']);
 		$sql = 'select * from taikhoan where Email ="'.$_POST['email'].'" and Password = "'.$_POST['pw'].'" ';
 		$result = mysqli_query($conn, $sql);
 		if(mysqli_num_rows($result) > 0){

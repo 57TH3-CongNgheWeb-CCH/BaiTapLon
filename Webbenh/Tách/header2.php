@@ -3,9 +3,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Trang benh-PerfectCannabis</title>
-	<link rel="stylesheet" type="text/css" href="../benh.css">
-	<script src="../script.js"></script>
+	<title>Tra cứu bệnh</title>
+	<script src="../JqueryBootstrap/jquery-3.3.1.js"></script>
+	<script src="../js/benhOnClick.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/benh.css">
 	<link rel="icon" href="../cannabis.ico">
 </head>
 <body>

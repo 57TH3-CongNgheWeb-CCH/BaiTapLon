@@ -4,6 +4,7 @@
 	if (isset($_POST["btn_signup"])){
 		$email = $_POST['email'];
 		$pw = $_POST['pw'];
+		$pw=md5($pw);
 		$sql = "insert into taikhoan(Email, Password) values('$email','$pw');";
 		$result = mysqli_query($conn, $sql);
 		if ($email == "" && $pw == ""){
