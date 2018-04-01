@@ -2,10 +2,10 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 01, 2018 at 07:36 AM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.2
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th4 01, 2018 lúc 08:14 AM
+-- Phiên bản máy phục vụ: 10.1.30-MariaDB
+-- Phiên bản PHP: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,12 +19,12 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `caythuoc`
+-- Cơ sở dữ liệu: `caythuoc`
 --
 
 DELIMITER $$
 --
--- Procedures
+-- Thủ tục
 --
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_add_benh` (IN `intenbenh` VARCHAR(50), IN `inbieuhien` VARCHAR(50), IN `inpp` TEXT)  BEGIN
    INSERT INTO benh(tenbenh, bieuhien, pp)
@@ -90,7 +90,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `benh`
+-- Cấu trúc bảng cho bảng `benh`
 --
 
 CREATE TABLE `benh` (
@@ -101,7 +101,7 @@ CREATE TABLE `benh` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
 --
--- Dumping data for table `benh`
+-- Đang đổ dữ liệu cho bảng `benh`
 --
 
 INSERT INTO `benh` (`idbenh`, `tenbenh`, `noidung`, `anh`) VALUES
@@ -115,10 +115,11 @@ INSERT INTO `benh` (`idbenh`, `tenbenh`, `noidung`, `anh`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lienhe`
+-- Cấu trúc bảng cho bảng `lienhe`
 --
 
 CREATE TABLE `lienhe` (
+  `idlienhe` int(11) NOT NULL,
   `Email` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `noidung` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -126,7 +127,7 @@ CREATE TABLE `lienhe` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `taikhoan`
+-- Cấu trúc bảng cho bảng `taikhoan`
 --
 
 CREATE TABLE `taikhoan` (
@@ -135,7 +136,7 @@ CREATE TABLE `taikhoan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `taikhoan`
+-- Đang đổ dữ liệu cho bảng `taikhoan`
 --
 
 INSERT INTO `taikhoan` (`Email`, `Password`) VALUES
@@ -147,7 +148,7 @@ INSERT INTO `taikhoan` (`Email`, `Password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `thuoc`
+-- Cấu trúc bảng cho bảng `thuoc`
 --
 
 CREATE TABLE `thuoc` (
@@ -158,7 +159,7 @@ CREATE TABLE `thuoc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `thuoc`
+-- Đang đổ dữ liệu cho bảng `thuoc`
 --
 
 INSERT INTO `thuoc` (`idthuoc`, `tenthuoc`, `noidung`, `anh`) VALUES
@@ -175,7 +176,7 @@ INSERT INTO `thuoc` (`idthuoc`, `tenthuoc`, `noidung`, `anh`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `thuocbenh`
+-- Cấu trúc bảng cho bảng `thuocbenh`
 --
 
 CREATE TABLE `thuocbenh` (
@@ -184,31 +185,32 @@ CREATE TABLE `thuocbenh` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `benh`
+-- Chỉ mục cho bảng `benh`
 --
 ALTER TABLE `benh`
   ADD PRIMARY KEY (`idbenh`),
   ADD KEY `idbenh` (`idbenh`);
 
 --
--- Indexes for table `lienhe`
+-- Chỉ mục cho bảng `lienhe`
 --
 ALTER TABLE `lienhe`
+  ADD PRIMARY KEY (`idlienhe`),
   ADD KEY `Email` (`Email`);
 
 --
--- Indexes for table `taikhoan`
+-- Chỉ mục cho bảng `taikhoan`
 --
 ALTER TABLE `taikhoan`
   ADD PRIMARY KEY (`Email`),
   ADD UNIQUE KEY `Email` (`Email`);
 
 --
--- Indexes for table `thuoc`
+-- Chỉ mục cho bảng `thuoc`
 --
 ALTER TABLE `thuoc`
   ADD PRIMARY KEY (`idthuoc`),
@@ -218,11 +220,21 @@ ALTER TABLE `thuoc`
   ADD KEY `idthuoc_3` (`idthuoc`);
 
 --
--- Indexes for table `thuocbenh`
+-- Chỉ mục cho bảng `thuocbenh`
 --
 ALTER TABLE `thuocbenh`
   ADD KEY `tenbenh` (`tenbenh`),
   ADD KEY `idthuoc` (`idthuoc`);
+
+--
+-- AUTO_INCREMENT cho các bảng đã đổ
+--
+
+--
+-- AUTO_INCREMENT cho bảng `lienhe`
+--
+ALTER TABLE `lienhe`
+  MODIFY `idlienhe` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
