@@ -7,8 +7,9 @@
 </head>
 <body>
 	<?php
-	// Tạo file kết nối
-	include('../ketnoi.php');
+		// Tạo file kết nối
+		include('../ketnoi.php');
+		mysqli_set_charset($conn,'UTF8');
 	?>
 	<div id="menu">
 		<div id="logo">
@@ -29,7 +30,7 @@
 		<div id="dulieu">
 			<h2>Quản Lí Bệnh</h2>
 			<input id="place" type="text" name="txttenbang" value="benh" readonly="readonly"><br>
-
+			<input id="place" type="text" name="txtidbenh" placeholder="ID Bệnh"><br>
 			<input id="place" type="text" name="txttenbenh" placeholder="Tên Bệnh"><br>
 			<input id="place" type="text" name="txtnoidung" placeholder="Nội Dung"><br>
 			<input id="place" type="text" name="txtanh" placeholder="Ảnh"><br>
@@ -40,21 +41,24 @@
 		
 	</form>
 	<?php 
+	
 		//thêm bệnh
 	if(isset($_POST['btnthem']))
 	{
+
 			// Gán tên biến vào giá trị của nút
 		$tenbang = mysqli_real_escape_string($conn,$_POST['txttenbang']);
+		$idbenh = mysqli_real_escape_string($conn,$_POST['txtidbenh']);
 		$tenbai = mysqli_real_escape_string($conn,$_POST['txttenbenh']);
 		$noidung = mysqli_real_escape_string($conn,$_POST['txtnoidung']);
 		$anh = mysqli_real_escape_string($conn,$_POST['txtanh']);
 		//câu lệnh sql thêm bản ghi 
-		$sql = "INSERT INTO $tenbang(tenbenh,noidung,anh) VALUES('$tenbai','$noidung','$anh')";
+		$sql = "INSERT INTO $tenbang(tenbenh,noidung,anh,idbenh) VALUES('$tenbai','$noidung','$anh','$idbenh')";
 		$result = mysqli_query($conn,$sql);
 		//câu lệnh điều kiện kiểm tra đã nhập tên bệnh hay chưa.
-		if($tenbai==null)
+		if($tenbai==null&&$idbenh==null)
 		{
-			echo '<script>alert("Bạn cần nhập tên bệnh")</script>';
+			echo '<script>alert("Bạn cần nhập tên bệnh và id bệnh")</script>';
 		}
 		else
 		{
@@ -73,15 +77,15 @@
 	if(isset($_POST['btnsua']))
 	{
 		$tenbang = mysqli_real_escape_string($conn,$_POST['txttenbang']);
-
+		$idbenh = mysqli_real_escape_string($conn,$_POST['txtidbenh']);
 		$tenbenh = mysqli_real_escape_string($conn,$_POST['txttenbenh']);
 		$noidung = mysqli_real_escape_string($conn,$_POST['txtnoidung']);
 		$anh = mysqli_real_escape_string($conn,$_POST['txtanh']);
 		//câu lệnh sưa dữ liệu trong bảng có biến tên bảng vs trường nội dung = vs biện nội dung vs điều kiện trường bệnh bằng vs biến bệnh
-		$sql = "UPDATE $tenbang SET `noidung`='$noidung',`anh`='$anh' WHERE `tenbenh`='$tenbenh'";
+		$sql = "UPDATE $tenbang SET `noidung`='$noidung',`anh`='$anh', `tenbenh`='$tenbenh' WHERE `idbenh`='$idbenh'";
 		//chứa kết quả thực truy xuất từ csdl
 		$result = mysqli_query($conn,$sql);
-		if($tenbenh == null)
+		if($tenbenh == null&&$idbenh==null)
 		{
 			echo '<script>alert("Bạn cần nhập tenbenh!")</script>';
 		}
@@ -101,14 +105,14 @@
 		//xóa bệnh
 	if(isset($_POST['btnxoa']))
 	{
+		$idbenh = mysqli_real_escape_string($conn,$_POST['txtidbenh']);
 		$tenbang = mysqli_real_escape_string($conn,$_POST['txttenbang']);
-		$tenbenh = mysqli_real_escape_string($conn,$_POST['txttenbenh']);
-		$sql = "DELETE FROM $tenbang WHERE `tenbenh`='$tenbenh'";
+		$sql = "DELETE FROM $tenbang WHERE `idbenh`='$idbenh'";
 
 		$result = mysqli_query($conn,$sql);
-		if($tenbenh == null)
+		if($idbenh==null)
 		{
-			echo '<script>alert("Bạn cần nhập id bệnh!")</script>';
+			echo '<script>alert("Bạn cần nhập id bệnh! và tên bệnh")</script>';
 		}
 		else
 		{
