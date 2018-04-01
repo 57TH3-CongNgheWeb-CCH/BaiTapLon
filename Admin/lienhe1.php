@@ -33,14 +33,12 @@
 			<h2>Liên hệ</h2>			
 				<div class="row">
 					<div class="col-md-12">
-						<div class="col-md-6" id="div1">
+						<div class="col-md-12" id="div1">
 							 <?php
 								include('getLienhe.php');//lay du lieu tu getLienhe.php
 							?>
 						</div>
-						<div id="div2" class="col-md-6">
-							<?php include('getNoidung.php'); ?><!-- lay du lieu tu getNoidung.php -->
-						</div>
+						
 						
 					</div>
 				</div>			
