@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="utf8" collation="utf8_unicode_ci">caythuoc</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="benh" view="colnames">
+<left>193</left>
+<top>108</top>
+<width>92</width>
+<height>163</height>
+<sql_create_table>CREATE TABLE `benh` (
+  `idbenh` varchar(5) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `tenbenh` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `noidung` text COLLATE utf8_unicode_ci,
+  `anh` varchar(1000) CHARACTER SET utf32 COLLATE utf32_unicode_ci NOT NULL,
+  `idthuoc` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`idbenh`),
+  KEY `idbenh` (`idbenh`),
+  KEY `idthuoc` (`idthuoc`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci</sql_create_table>
+</table>
+<table name="thuoc" view="colnames">
+<left>559</left>
+<top>82</top>
+<width>95</width>
+<height>146</height>
+<sql_create_table>CREATE TABLE `thuoc` (
+  `idthuoc` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `tenthuoc` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `noidung` text COLLATE utf8_unicode_ci,
+  `anh` text COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`idthuoc`),
+  UNIQUE KEY `idthuoc_4` (`idthuoc`),
+  KEY `idthuoc` (`idthuoc`),
+  KEY `idthuoc_2` (`idthuoc`),
+  KEY `idthuoc_3` (`idthuoc`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci</sql_create_table>
+</table>
+<table name="taikhoan" view="colnames">
+<left>216</left>
+<top>350</top>
+<width>100</width>
+<height>112</height>
+<sql_create_table>CREATE TABLE `taikhoan` (
+  `Email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Password` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`Email`),
+  UNIQUE KEY `Email` (`Email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci</sql_create_table>
+</table>
+<table name="lienhe" view="colnames">
+<left>589</left>
+<top>379</top>
+<width>91</width>
+<height>129</height>
+<sql_create_table>CREATE TABLE `lienhe` (
+  `idlienhe` int(11) NOT NULL AUTO_INCREMENT,
+  `Email` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `noidung` text COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`idlienhe`),
+  KEY `Email` (`Email`),
+  CONSTRAINT `lienhe_ibfk_1` FOREIGN KEY (`Email`) REFERENCES `taikhoan` (`Email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>
