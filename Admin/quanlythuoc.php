@@ -41,7 +41,7 @@
 	<?php 
 	include('../ketnoi.php');
 	mysqli_set_charset($conn,'UTF8');
-		//thêm bài đăng
+		//thêm thuoc
 	if(isset($_POST['btnthem']))
 	{
 			// Gán tên biến vào giá trị của nút

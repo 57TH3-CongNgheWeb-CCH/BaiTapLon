@@ -1,7 +1,5 @@
 		<div id="content-column1">
-			<a href="webbenh.php?webbenh1=Viemgan1&id=12" id="a">
-				<img src="../images/viemganb.jpg" id="img">
-				<p id="p">Viêm gan B</p>
+		
 			</a>
 			<a href="webbenh.php?webbenh1=Beophi1&id=13" id="a">
 				<img src="../images/benhbeophi.jpg" id="img">
